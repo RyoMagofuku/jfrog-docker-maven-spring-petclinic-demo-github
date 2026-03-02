@@ -125,6 +125,9 @@ jobs:
           JF_BASE_IMAGE="${JF_DOMAIN}/${DOCKER_VIRTUAL_REPO}/eclipse-temurin:17-jdk-focal"
           echo "Docker base image: $JF_BASE_IMAGE"
           
+          # login
+          jf docker login $JF_DOMAIN
+
           # build and push
           jf docker build \
             --build-arg BASE_IMAGE=$JF_BASE_IMAGE \
