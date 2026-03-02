@@ -95,7 +95,7 @@ jobs:
 
           # Configure Maven to use Artifactory virtual repository based on branch
           jf mvnc \
-            -DaltDeploymentRepository=central::default::${DEPLOY_URL} \
+            -DaltDeploymentRepository=central::${DEPLOY_URL} \
             --repo-resolve-snapshots $MVN_VIRTUAL_REPO \
             --repo-resolve-releases $MVN_REMOTE_REPO \
             --repo-deploy-snapshots $MVN_LOCAL_REPO \
